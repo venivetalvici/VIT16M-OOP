@@ -7,6 +7,7 @@ public class Car {
     String brandName;
     String label;
     boolean registration;
+    String resultregistration = (registration =true) ? "есть" : "нету";
 
     public void move(int distance){
         System.out.println("Поехали");
@@ -21,7 +22,8 @@ public class Car {
         System.out.println("количество дверей " + doors);
         System.out.println("Название марки " + brandName);
         System.out.println("Название модели " + label);
-        System.out.println("Регистрация " + registration);
+        resultregistration = (registration =true) ? "есть" : "нету";
+        System.out.println("Регистрация " + resultregistration );
     }
 
 }
