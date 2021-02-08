@@ -12,7 +12,7 @@ public class hw extends JFrame {
 
 
     public hw(){
-        super("Crow calculator");
+        super("Book calculator");
         //Подготавливаем компоненты объекта
         countLabel = new JLabel("Books:" + book);
         addBook = new JButton("Add Book");
@@ -35,14 +35,14 @@ public class hw extends JFrame {
         addBook.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 book = book + 1;     //Добавляем одну ворону
-                countLabel.setText("Books:" + book); //Сообщаем приложению, что количество ворон изменилось
+                countLabel.setText("Books:" + book); //Сообщаем приложению, что количество книг изменилось
             }
         });
         removeBook.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (book > 0) {
                     book = book - 1;
-                    countLabel.setText("Books:" + book);  //Сообщаем приложению, что количество ворон изменилось
+                    countLabel.setText("Books:" + book);  //Сообщаем приложению, что количество книг изменилось
                 }
             }
         });
