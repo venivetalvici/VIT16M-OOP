@@ -7,37 +7,48 @@ public class Car {
     String brandName;
     String label;
     boolean registration;
-    String resultregistration = (registration =true) ? "есть" : "нету";
 
-    public void move(int distance){
-        System.out.println("Поехали");
-        mileAge += distance;
-        //mileAge = mileAge + distance; тоже самое что и 12 строчка
-    }
-    public void displayInfo(){
-        System.out.println("количество колёс " + wheels);
-        System.out.println("километраж " + mileAge);
-        System.out.println("цвет " + color);
-        System.out.println("номер двигателя " + carID);
-        System.out.println("количество дверей " + doors);
-        System.out.println("Название марки " + brandName);
-        System.out.println("Название модели " + label);
-        resultregistration = (registration =true) ? "есть" : "нету";
-        System.out.println("Регистрация " + resultregistration );
+    public void move(int distance) {
+        System.out.println("Мы поехали");
+        // mileAge += distance;
+        mileAge = mileAge + distance;
     }
 
+    public void recolor(String newColor) {
+        color = newColor;
+    }
+
+    public void displayInfo() {
+        System.out.println("Колёса, количество " + wheels);
+        System.out.println("Километраж " + mileAge);
+        System.out.println("Цвет машины " + color);
+        System.out.println("Номер двигателя " + carID);
+        System.out.println("Количество дверей " + doors);
+        System.out.println("Марка машины " + brandName);
+        System.out.println("Модель машины " + label);
+        System.out.println(registration ? "Зарегана" : "Угнана");
+        //     boolean registration;
+        //
+    }
 }
 
-class TestCar{
-        public static void main (String[] args){
-            Car car = new Car();
-            Car toyota = new Car();
-            Car porsche = new Car();
-            //System.out.println(porsche.brandName);
-            //System.out.println(porsche.doors);
-            System.out.println(porsche.registration);
-            porsche.move(1200);
-            porsche.displayInfo();
-}
-
+class TestCar {
+    public static void main(String[] args) {
+        Car car = new Car();
+        Car toyota = new Car();
+        Car porsche = new Car();
+/*        System.out.println(porsche.brandName);
+        System.out.println(porsche.doors);
+        System.out.println(porsche.registration);*/
+        porsche.move(1200);
+/*        System.out.println(porsche.mileAge);
+        System.out.println(porsche.wheels);*/
+        //porsche.displayInfo();
+        porsche.color = "Yellow";
+        //porsche.displayInfo();
+        porsche.recolor("Pink");
+        porsche.displayInfo();
+        porsche.recolor("Green");
+        porsche.displayInfo();
+    }
 }
